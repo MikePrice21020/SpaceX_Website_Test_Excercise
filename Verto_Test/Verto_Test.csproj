@@ -111,7 +111,10 @@
       <DependentUpon>VertoData.mdf</DependentUpon>
     </Content>
     <Content Include="assets\css\app.css" />
+    <Content Include="assets\img\cashback.jpg" />
     <Content Include="assets\img\events.jpg" />
+    <Content Include="assets\img\fieldscopekit.jpg" />
+    <Content Include="assets\img\fieldscopes.jpg" />
     <Content Include="assets\img\gallery.jpg" />
     <Content Include="assets\img\news.jpg" />
     <Content Include="assets\img\orbit\space1.jpg" />

@@ -193,6 +193,87 @@ namespace Verto_Test {
         protected global::System.Web.UI.WebControls.Label gallery_Content;
         
         /// <summary>
+        /// cashback_ImgPath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal cashback_ImgPath;
+        
+        /// <summary>
+        /// cashback_Header control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label cashback_Header;
+        
+        /// <summary>
+        /// cashback_Content control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label cashback_Content;
+        
+        /// <summary>
+        /// fieldscopes_ImgPath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal fieldscopes_ImgPath;
+        
+        /// <summary>
+        /// fieldscopes_Header control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label fieldscopes_Header;
+        
+        /// <summary>
+        /// fieldscopes_Content control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label fieldscopes_Content;
+        
+        /// <summary>
+        /// fieldscopekit_ImgPath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal fieldscopekit_ImgPath;
+        
+        /// <summary>
+        /// fieldscopekit_Header control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label fieldscopekit_Header;
+        
+        /// <summary>
+        /// fieldscopekit_Content control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label fieldscopekit_Content;
+        
+        /// <summary>
         /// VertoRepeater control.
         /// </summary>
         /// <remarks>

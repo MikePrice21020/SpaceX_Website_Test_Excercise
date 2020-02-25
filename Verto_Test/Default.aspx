@@ -69,78 +69,75 @@
         <div class="grid-x grid-margin-x small-up-2 medium-up-2 large-up-3">
             <div class="cell">
                 <div style="background-color:white">
-                <img src="assets\\img\\product.jpg">
-                <p>Discovery WP PC</p>
-                <p><b>£20 Cashback</b>.</p>
+                <img src="<asp:Literal ID = "cashback_ImgPath" runat = "server" />">
+                <p><asp:Label ID = "cashback_Header" runat = "server" /></p>
+                <p><b><asp:Label ID = "cashback_Content" runat = "server" /></b>.</p>
                  </div>
             </div>
             <div class="cell">
                 <div style="background-color:white">
-                <img src="assets\\img\\events.jpg">
-                <p>Discovery WP PC</p>
-                <p><b>£20 Cashback</b>.</p>
+                <img src="<asp:Literal ID = "fieldscopes_ImgPath" runat = "server" />">
+                <p><asp:Label ID = "fieldscopes_Header" runat = "server" /></p>
+                <p><b><asp:Label ID = "fieldscopes_Content" runat = "server" /></b>.</p>
                 </div>
                 <a href="#" class="button expanded">View All Offers</a>
             </div>
             <div class="cell">
              <div style="background-color:white">
-                <img src="assets\\img\\news.jpg">
-                <p>Discovery WP PC</p>
-                <p><b>£20 Cashback</b>.</p>
+                <img src="<asp:Literal ID = "fieldscopekit_ImgPath" runat = "server" />">
+                <p><asp:Label ID = "fieldscopekit_Header" runat = "server" /></p>
+                <p><b><asp:Label ID = "fieldscopekit_Content" runat = "server" /></b>.</p>
                  </div>
             </div>
         </div>
             </div>
 
          <div class="text-center">
+            <hr>
             <h4>Product Categories</h4>
             <hr>
         </div>
     </article>
+
+
+
+
+
         <asp:Repeater ID="VertoRepeater" runat="server">  
-    <HeaderTemplate>  
-    <table style="border:1px solid #0000FF; width:500px" cellpadding="0">  
-    <tr style="background-color:#FF6600; color:#000000; font-size: large; font-weight: bold;">  
-    <td colspan="2">  
-    <b>Comments</b>  
-    </td>  
-    </tr>  
-    </HeaderTemplate>  
-    <ItemTemplate>  
-    <tr style="background-color:#EBEFF0">  
-    <td>  
-    <table style="background-color:#EBEFF0;border-top:1px dotted #df5015; width:500px" >  
-    <tr>  
-    <td >  
-    Subject:  
-    <asp:Label ID="lblSubject" runat="server" Text='<%#Eval("Subject") %>' Font-Bold="true"/>  
-    </td>  
-    </tr>  
-    </table>  
-    </td>  
-    </tr>  
-    <tr>  
-    <td>  
-    <asp:Label ID="lblComment" runat="server" Text='<%#Eval("CommentOn") %>'/>  
-    </td>  
-    </tr>  
-    <tr>  
-    <td>  
-    <table style="background-color:#EBEFF0;border-top:1px dotted #df5015;border-bottom:1px solid #df5015; width:500px" >  
-    <tr>  
-    <td >Post By: <asp:Label ID="lblUser" runat="server" Font-Bold="true" Text='<%#Eval("UserName") %>'/></td>  
-    <td >Created Date:<asp:Label ID="lblDate" runat="server" Font-Bold="true" Text='<%#Eval("Post_Date") %>'/></td>  
-    </tr>  
-    </table>  
-    </td>  
-    </tr>  
-    <tr>  
-    <td colspan="2"> </td>  
-    </tr>  
-    </ItemTemplate>  
+            <HeaderTemplate>  
+                <table style="border:1px solid #0000FF; width:500px" cellpadding="0">  
+                    <tr style="background-color:#FF6600; color:#000000; font-size: large; font-weight: bold;">  
+                        <td colspan="2">  
+                            <b>Comments</b>  
+                        </td>  
+                    </tr>  
+            </HeaderTemplate>  
+        <ItemTemplate>  
+            <tr style="background-color:#EBEFF0">  
+                <td>  
+                    <table style="background-color:#EBEFF0;border-top:1px dotted #df5015; width:500px" >  
+                        <tr>  
+                            <td >
+                                <img src="<asp:Literal ID="lblImgPath" runat="server" Text='<%#Eval("ImgPath") %>'/>">
+                             </td>  
+                        </tr>  
+                    </table>  
+                </td>  
+            </tr>  
+            <tr>  
+                <td>  
+                    <asp:Label ID="lblHeader" runat="server" Text='<%#Eval("Header") %>' Font-Bold="true"/>  
+                </td>  
+            </tr>    
+            <tr>  
+                <td colspan="2"> </td>  
+            </tr>  
+    </ItemTemplate>
+            
     <FooterTemplate>  
-    </table>  
-    </FooterTemplate>  
+        </table>  
+    </FooterTemplate>
+            
     </asp:Repeater>  
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>

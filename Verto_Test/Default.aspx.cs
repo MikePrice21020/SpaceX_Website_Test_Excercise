@@ -35,49 +35,42 @@ namespace Verto_Test
                             orbit1_Header.Text = sdr["Header"].ToString();
                             orbit1_ImgPath.Text = sdr["ImgPath"].ToString();
                         }
-                        con.Close();
                     }
 
                     using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath FROM Orbit WHERE Id = 1"))
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = con;
-                        con.Open();
                         using (SqlDataReader sdr = cmd.ExecuteReader())
                         {
                             sdr.Read();
                             orbit2_Header.Text = sdr["Header"].ToString();
                             orbit2_ImgPath.Text = sdr["ImgPath"].ToString();
                         }
-                        con.Close();
                     }
 
                     using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath FROM Orbit WHERE Id = 2"))
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = con;
-                        con.Open();
                         using (SqlDataReader sdr = cmd.ExecuteReader())
                         {
                             sdr.Read();
                             orbit3_Header.Text = sdr["Header"].ToString();
                             orbit3_ImgPath.Text = sdr["ImgPath"].ToString();
                         }
-                        con.Close();
                     }
 
                     using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath FROM Orbit WHERE Id = 3"))
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = con;
-                        con.Open();
                         using (SqlDataReader sdr = cmd.ExecuteReader())
                         {
                             sdr.Read();
                             orbit4_Header.Text = sdr["Header"].ToString();
                             orbit4_ImgPath.Text = sdr["ImgPath"].ToString();
                         }
-                        con.Close();
                     }
 
 
@@ -87,7 +80,6 @@ namespace Verto_Test
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = con;
-                        con.Open();
                         using (SqlDataReader sdr = cmd.ExecuteReader())
                         {
                             sdr.Read();
@@ -95,13 +87,11 @@ namespace Verto_Test
                             product_ImgPath.Text = sdr["ImgPath"].ToString();
                             product_Content.Text = sdr["Content"].ToString();
                         }
-                        con.Close();
                     }
                     using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath, Content FROM PageContent WHERE Id = 1"))
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = con;
-                        con.Open();
                         using (SqlDataReader sdr = cmd.ExecuteReader())
                         {
                             sdr.Read();
@@ -109,13 +99,11 @@ namespace Verto_Test
                             event_ImgPath.Text = sdr["ImgPath"].ToString();
                             event_Content.Text = sdr["Content"].ToString();
                         }
-                        con.Close();
                     }
                     using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath, Content FROM PageContent WHERE Id = 2"))
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = con;
-                        con.Open();
                         using (SqlDataReader sdr = cmd.ExecuteReader())
                         {
                             sdr.Read();
@@ -123,13 +111,11 @@ namespace Verto_Test
                             news_ImgPath.Text = sdr["ImgPath"].ToString();
                             news_Content.Text = sdr["Content"].ToString();
                         }
-                        con.Close();
                     }
                     using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath, Content FROM PageContent WHERE Id = 3"))
                     {
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = con;
-                        con.Open();
                         using (SqlDataReader sdr = cmd.ExecuteReader())
                         {
                             sdr.Read();
@@ -137,8 +123,47 @@ namespace Verto_Test
                             gallery_ImgPath.Text = sdr["ImgPath"].ToString();
                             gallery_Content.Text = sdr["Content"].ToString();
                         }
-                        con.Close();
                     }
+
+                    // Special offers
+
+                    using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath, Content FROM PageContent WHERE Id = 4"))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Connection = con;
+                        using (SqlDataReader sdr = cmd.ExecuteReader())
+                        {
+                            sdr.Read();
+                            cashback_Header.Text = sdr["Header"].ToString();
+                            cashback_ImgPath.Text = sdr["ImgPath"].ToString();
+                            cashback_Content.Text = sdr["Content"].ToString();
+                        }
+                    }
+                    using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath, Content FROM PageContent WHERE Id = 5"))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Connection = con;
+                        using (SqlDataReader sdr = cmd.ExecuteReader())
+                        {
+                            sdr.Read();
+                            fieldscopes_Header.Text = sdr["Header"].ToString();
+                            fieldscopes_ImgPath.Text = sdr["ImgPath"].ToString();
+                            fieldscopes_Content.Text = sdr["Content"].ToString();
+                        }
+                    }
+                    using (SqlCommand cmd = new SqlCommand("SELECT Id, Header, ImgPath, Content FROM PageContent WHERE Id = 6"))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Connection = con;
+                        using (SqlDataReader sdr = cmd.ExecuteReader())
+                        {
+                            sdr.Read();
+                            fieldscopekit_Header.Text = sdr["Header"].ToString();
+                            fieldscopekit_ImgPath.Text = sdr["ImgPath"].ToString();
+                            fieldscopekit_Content.Text = sdr["Content"].ToString();
+                        }
+                    }
+                    con.Close();
                 }
                 RepeterData();
             }
@@ -147,12 +172,13 @@ namespace Verto_Test
         {
             SqlConnection con = new SqlConnection(constr);
             con.Open();
-            cmd = new SqlCommand("Select * from Comment Order By Post_Date desc", con);
+            cmd = new SqlCommand("Select * from Repeater Order By Header", con);
             DataSet ds = new DataSet();
             da = new SqlDataAdapter(cmd);
             da.Fill(ds);
             VertoRepeater.DataSource = ds;
             VertoRepeater.DataBind();
+            con.Close();
         }
     }
 }
