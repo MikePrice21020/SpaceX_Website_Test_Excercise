@@ -70,23 +70,23 @@
             <div class="cell">
                 <div style="background-color:white">
                 <img src="<asp:Literal ID = "cashback_ImgPath" runat = "server" />">
-                <p><asp:Label ID = "cashback_Header" runat = "server" /></p>
-                <p><b><asp:Label ID = "cashback_Content" runat = "server" /></b>.</p>
+                <p align="center"><asp:Label ID = "cashback_Header" runat = "server" /></p>
+                <p align="center"><b><asp:Label ID = "cashback_Content" runat = "server" /></b>.</p>
                  </div>
             </div>
             <div class="cell">
                 <div style="background-color:white">
                 <img src="<asp:Literal ID = "fieldscopes_ImgPath" runat = "server" />">
-                <p><asp:Label ID = "fieldscopes_Header" runat = "server" /></p>
-                <p><b><asp:Label ID = "fieldscopes_Content" runat = "server" /></b>.</p>
+                <p align="center"><asp:Label ID = "fieldscopes_Header" runat = "server" /></p>
+                <p align="center"><b><asp:Label ID = "fieldscopes_Content" runat = "server" /></b>.</p>
                 </div>
                 <a href="#" class="button expanded">View All Offers</a>
             </div>
             <div class="cell">
              <div style="background-color:white">
                 <img src="<asp:Literal ID = "fieldscopekit_ImgPath" runat = "server" />">
-                <p><asp:Label ID = "fieldscopekit_Header" runat = "server" /></p>
-                <p><b><asp:Label ID = "fieldscopekit_Content" runat = "server" /></b>.</p>
+                <p align="center"><asp:Label ID = "fieldscopekit_Header" runat = "server" /></p>
+                <p align="center"><b><asp:Label ID = "fieldscopekit_Content" runat = "server" /></b>.</p>
                  </div>
             </div>
         </div>
@@ -105,15 +105,10 @@
 
         <asp:Repeater ID="VertoRepeater" runat="server">  
             <HeaderTemplate>  
-                <table style="border:1px solid #0000FF; width:500px" cellpadding="0">  
-                    <tr style="background-color:#FF6600; color:#000000; font-size: large; font-weight: bold;">  
-                        <td colspan="2">  
-                            <b>Comments</b>  
-                        </td>  
-                    </tr>  
+                <table style="width:500px" cellpadding="0" align="center">  
             </HeaderTemplate>  
         <ItemTemplate>  
-            <tr style="background-color:#EBEFF0">  
+            <tr style="background-color:white">  
                 <td>  
                     <table style="background-color:#EBEFF0;border-top:1px dotted #df5015; width:500px" >  
                         <tr>  
@@ -124,13 +119,13 @@
                     </table>  
                 </td>  
             </tr>  
-            <tr>  
-                <td>  
+            <tr style="background-color:white">  
+                <td align="center">  
                     <asp:Label ID="lblHeader" runat="server" Text='<%#Eval("Header") %>' Font-Bold="true"/>  
                 </td>  
             </tr>    
             <tr>  
-                <td colspan="2"> </td>  
+                <td colspan="5"> </td>  
             </tr>  
     </ItemTemplate>
             

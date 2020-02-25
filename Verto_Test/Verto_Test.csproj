@@ -122,6 +122,10 @@
     <Content Include="assets\img\orbit\space3.jpg" />
     <Content Include="assets\img\orbit\space4.jpg" />
     <Content Include="assets\img\product.jpg" />
+    <Content Include="assets\img\repeater\Infinity70_refractor Telescope.jpg" />
+    <Content Include="assets\img\repeater\skywatcher_150.jpg" />
+    <Content Include="assets\img\repeater\skywatcher_skymax.jpg" />
+    <Content Include="assets\img\repeater\ts_starscope.jpg" />
     <Content Include="assets\img\spaceX_logo.jpg" />
     <Content Include="assets\js\app.js" />
     <Content Include="Contact.aspx" />

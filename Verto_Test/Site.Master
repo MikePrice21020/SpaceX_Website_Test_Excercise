@@ -78,26 +78,18 @@
         <article class="grid-container">
             <div class="grid-x">
                 <div class="large-4 cell">
-                    <h5>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</h5>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                    <p> &copy; <%: DateTime.Now.Year %> SpaceX Unit, biden mortie, Lapize bey, Luton, Gedfordshire, JH4 9FE, UK</p>
+                    <p>Site map/Terms/Privacy Policy/Site By SpaceX</p>
                 </div>
                 <div class="large-3 large-offset-2 cell">
                     <ul class="menu vertical">
-                        <li><a href="#">One</a></li>
-                        <li><a href="#">Two</a></li>
-                        <li><a href="#">Three</a></li>
-                        <li><a href="#">Four</a></li>
+                        <h4>call <b>07392 628533</b></h4>
+                        <p><b>email us </b>sales@spacex.co.uk</p>
                     </ul>
                 </div>
-                <div class="large-3 cell">
-                    <ul class="menu vertical">
-                        <li><a href="#">One</a></li>
-                        <li><a href="#">Two</a></li>
-                        <li><a href="#">Three</a></li>
-                        <li><a href="#">Four</a></li>
-                    </ul>
-                </div>
-                </div>
+                    <div class="large-3 cell">
+                    </div>
+           </div>
         </article>
     </footer>
         </div>
