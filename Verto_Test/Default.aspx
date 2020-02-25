@@ -70,20 +70,23 @@
             <div class="cell">
                 <div style="background-color:white">
                 <img src="assets\\img\\product.jpg">
-                <p>Lorem ipsum dolor sit amert, id per dictus incermis. Eam odio modo cibo at. Purto diginissim euripidis eu mel, cu mel</p>
+                <p>Discovery WP PC</p>
+                <p><b>£20 Cashback</b>.</p>
                  </div>
             </div>
             <div class="cell">
                 <div style="background-color:white">
                 <img src="assets\\img\\events.jpg">
-                <p>Lorem ipsum dolor sit amert, id per dictus incermis. Eam odio modo cibo at. Purto diginissim euripidis eu mel, cu mel</p>
+                <p>Discovery WP PC</p>
+                <p><b>£20 Cashback</b>.</p>
                 </div>
                 <a href="#" class="button expanded">View All Offers</a>
             </div>
             <div class="cell">
              <div style="background-color:white">
                 <img src="assets\\img\\news.jpg">
-                <p>Lorem ipsum dolor sit amert, id per dictus incermis. Eam odio modo cibo at. Purto diginissim euripidis eu mel, cu mel</p>
+                <p>Discovery WP PC</p>
+                <p><b>£20 Cashback</b>.</p>
                  </div>
             </div>
         </div>
@@ -94,6 +97,51 @@
             <hr>
         </div>
     </article>
+        <asp:Repeater ID="VertoRepeater" runat="server">  
+    <HeaderTemplate>  
+    <table style="border:1px solid #0000FF; width:500px" cellpadding="0">  
+    <tr style="background-color:#FF6600; color:#000000; font-size: large; font-weight: bold;">  
+    <td colspan="2">  
+    <b>Comments</b>  
+    </td>  
+    </tr>  
+    </HeaderTemplate>  
+    <ItemTemplate>  
+    <tr style="background-color:#EBEFF0">  
+    <td>  
+    <table style="background-color:#EBEFF0;border-top:1px dotted #df5015; width:500px" >  
+    <tr>  
+    <td >  
+    Subject:  
+    <asp:Label ID="lblSubject" runat="server" Text='<%#Eval("Subject") %>' Font-Bold="true"/>  
+    </td>  
+    </tr>  
+    </table>  
+    </td>  
+    </tr>  
+    <tr>  
+    <td>  
+    <asp:Label ID="lblComment" runat="server" Text='<%#Eval("CommentOn") %>'/>  
+    </td>  
+    </tr>  
+    <tr>  
+    <td>  
+    <table style="background-color:#EBEFF0;border-top:1px dotted #df5015;border-bottom:1px solid #df5015; width:500px" >  
+    <tr>  
+    <td >Post By: <asp:Label ID="lblUser" runat="server" Font-Bold="true" Text='<%#Eval("UserName") %>'/></td>  
+    <td >Created Date:<asp:Label ID="lblDate" runat="server" Font-Bold="true" Text='<%#Eval("Post_Date") %>'/></td>  
+    </tr>  
+    </table>  
+    </td>  
+    </tr>  
+    <tr>  
+    <td colspan="2"> </td>  
+    </tr>  
+    </ItemTemplate>  
+    <FooterTemplate>  
+    </table>  
+    </FooterTemplate>  
+    </asp:Repeater>  
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>

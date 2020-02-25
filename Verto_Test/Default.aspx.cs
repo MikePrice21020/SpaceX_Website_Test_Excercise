@@ -12,11 +12,14 @@ namespace Verto_Test
 {
     public partial class _Default : Page
     {
+        SqlCommand cmd;
+        SqlDataAdapter da;
+        DataSet ds;
+        string constr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\VertoData.mdf;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
             {
-                string constr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\VertoData.mdf;Integrated Security=True";
                 using (SqlConnection con = new SqlConnection(constr))
                 {
 
@@ -137,7 +140,19 @@ namespace Verto_Test
                         con.Close();
                     }
                 }
+                RepeterData();
             }
+        }
+        public void RepeterData()
+        {
+            SqlConnection con = new SqlConnection(constr);
+            con.Open();
+            cmd = new SqlCommand("Select * from Comment Order By Post_Date desc", con);
+            DataSet ds = new DataSet();
+            da = new SqlDataAdapter(cmd);
+            da.Fill(ds);
+            VertoRepeater.DataSource = ds;
+            VertoRepeater.DataBind();
         }
     }
 }
